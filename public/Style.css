@@ -1,0 +1,107 @@
+:root {
+    --lightest_blue: #D6DBF5;
+    --light_blue: #4D5B9E;
+    --dark_blue: #293264;
+    --correct: #94D7A2;
+    --error: #F8BCBC;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F5F7FB;
+    display: flex;
+    justify-content: center;
+    scroll-behavior: smooth;
+}
+body > * {
+    width: 70%;
+}
+main {
+    display: grid;
+    place-content: center;
+    text-align: center;
+}
+main h1 {
+    color: var(--dark_blue);
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+main h6 {
+    color: var(--light_blue);
+    font-size: 1.5rem;
+}
+button {
+    background-color: var(--light_blue);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.6rem;
+    margin-block: 4rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    transition: background .3s;
+    -webkit-transition: background .3s;
+    -moz-transition: background .3s;
+    -ms-transition: background .3s;
+    -o-transition: background .3s;
+}
+main button:hover {
+    background-color: var(--dark_blue);
+}
+/* Start Exam Section */
+section {
+    margin-top: 40px;
+}
+div.answer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px
+}
+div.answer span {
+    color: var(--dark_blue);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-block: 1rem;
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--dark_blue);
+    border-radius: 18px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    -ms-border-radius: 18px;
+    -o-border-radius: 18px;
+    transition: background-, border, .3s;
+    -webkit-transition: background-, border, .3s;
+    -moz-transition: background-, border, .3s;
+    -ms-transition: background-, border, .3s;
+    -o-transition: background-, border, .3s;
+}
+:where(div.answer) span:hover, span.active {
+    cursor: pointer;
+    background-color: var(--lightest_blue);
+}
+div.answer span.error {
+    background-color: var(--error);
+    opacity: .6;
+}
+div.answer span.correct {
+    background-color: var(--correct);
+}
+span.disabled {
+    pointer-events: none;
+}
+hr {
+    margin-bottom: 30px;
+}
+.swal2-container {
+    width: 100%
+}
